@@ -4,10 +4,19 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+app	main.py	/^app = Flask(__name__)$/;"	kind:variable	line:3
 conn	db.py	/^conn = db.cursor()$/;"	kind:variable	line:17
+conn	display.py	/^conn = db.conn$/;"	kind:variable	line:2
+conn	execute.py	/^conn = db.conn$/;"	kind:variable	line:3
+data	display.py	/^data = conn.fetchall()$/;"	kind:variable	line:6
 db	db.py	/^        db      ="python"$/;"	kind:variable	line:11
 db	db.py	/^    db = MySQLdb.connect($/;"	kind:variable	line:7
 db.py	db.py	1;"	kind:file	line:1
+display.py	display.py	1;"	kind:file	line:1
+execute.py	execute.py	1;"	kind:file	line:1
 host	db.py	/^        host    ="127.0.0.1",$/;"	kind:variable	line:8
+index	main.py	/^def index():$/;"	kind:function	line:7
+main	main.py	/^def main():$/;"	kind:function	line:12
+main.py	main.py	1;"	kind:file	line:1
 passwd	db.py	/^        passwd  ="",$/;"	kind:variable	line:10
 user	db.py	/^        user    ="root",$/;"	kind:variable	line:9
