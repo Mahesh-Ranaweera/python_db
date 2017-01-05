@@ -16,6 +16,3 @@ except Exception as e:
 
 conn = db.cursor()
 
-#conn.execute('''CREATE TABLE user (email VARCHAR(60) PRIMARY KEY, name VARCHAR(60))''')
-
-conn.close()
