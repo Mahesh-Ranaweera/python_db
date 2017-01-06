@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<h1>Register Form</h1>
+
+<form method="POST" action="/register2">
+    <input type="text" name="name2" />
+    <button typs="submit">SUBMIT</button>
+</form>
+
+<h2>Data display</h2>
+<table>
+    {% for name in names %}
+    <tr><td>{{ name }}</td></tr>
+    {% endfor %}
+</table>

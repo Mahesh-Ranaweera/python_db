@@ -16,7 +16,7 @@ display.py	display.py	1;"	kind:file	line:1
 execute.py	execute.py	1;"	kind:file	line:1
 host	db.py	/^        host    ="127.0.0.1",$/;"	kind:variable	line:8
 index	main.py	/^def index():$/;"	kind:function	line:7
-main	main.py	/^def main():$/;"	kind:function	line:12
 main.py	main.py	1;"	kind:file	line:1
 passwd	db.py	/^        passwd  ="",$/;"	kind:variable	line:10
+profile	main.py	/^def profile(name):$/;"	kind:function	line:12
 user	db.py	/^        user    ="root",$/;"	kind:variable	line:9
