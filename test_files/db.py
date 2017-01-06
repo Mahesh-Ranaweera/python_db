@@ -1,3 +1,4 @@
+
 import MySQLdb
 import sys
 
@@ -14,3 +15,4 @@ except Exception as e:
     sys.exit("Database connection error!")
 
 conn = db.cursor()
+
