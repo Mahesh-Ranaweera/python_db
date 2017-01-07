@@ -1,14 +1,25 @@
 import db
 import sys
 conn = db.conn
+db = db.db
 
-#conn.execute('''CREATE TABLE user (email VARCHAR(60) PRIMARY KEY, name VARCHAR(60))''')
+email = "mi6softlab@gmail.com"
+FName = "Mahesh"
+LName = "Ranaweera"
+#password1 = raw_input("123")
+#password2 = raw_input("123")
+
+
+password1 = "123"
+password2 = "123"
+
 try:
-    conn.execute('''INSERT INTO user (email, name) 
-                    VALUES 
-                    ('asd@gmail.com','asd'),
-                    ('mah@gmail.com','mah')''')
+    sql = "INSERT INTO `user`(`email`, `fname`, `lname`, `passw1`, `passw2`) VALUES ('%s','%s','%s','%s','%s')" % \
+          (email, FName, LName, password1, password2)
+    conn.execute(sql)
+
     db.commit()
+    print "DONE"
 
 except Exception as e:
     sys.exit("Database error")

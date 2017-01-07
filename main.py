@@ -2,8 +2,12 @@ from flask import Flask, session, render_template, redirect, request, g, url_for
 import os
 import sys
 import MySQLdb
+
+from frontend import signup_sql
+
 import db
 conn = db.conn
+db   = db.db
 
 
 app = Flask(__name__)
@@ -38,16 +42,24 @@ def dashb():
     strLName = request.form['strLName']
     strPassw1= request.form['strPassw1']
     strPassw2= request.form['strPassw2']
+
     if strPassw1==strPassw2:
-        return render_template('dashb.html', 
-                            strEmail=strEmail, 
-                            strFName=strFName, 
-                            strLName= strLName, 
-                            strPassw1=strPassw1,
-                            strPassw2=strPassw2)
+        #submit sql data
+        signup_done = signup_sql(strEmail, strFName, strLName, strPassw1, strPassw2)
+
+        if (signup_done == True):
+            return render_template('signup.html', error="User Signup Successful, <a href='/signin.html'>Signin</a>",
+                                strEmail=strEmail,
+                                strFName=strFName,
+                                strLName= strLName,
+                                strPassw1=strPassw1,
+                                strPassw2=strPassw2)
+        else:
+            return render_template('signup', error="Signup Error, Try Again")
+
     else:
-        return render_template('signup.html',error="Password Not Matched")
+        return render_template('signup.html',error="Password Not Matched, Try Again")
+
 
 if __name__ == "__main__":
     app.run()
-
